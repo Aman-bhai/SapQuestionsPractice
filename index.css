@@ -1,0 +1,191 @@
+/* ------------------------------------------------------------
+   GLOBAL
+------------------------------------------------------------ */
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f7f8fb;
+  color: #222;
+}
+.app-shell {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px;
+}
+/* ------------------------------------------------------------
+   TOPBAR
+------------------------------------------------------------ */
+.topbar {
+  background: #0d6efd;
+  padding: 12px 15px;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.topbar {
+  background: #0d6efd;
+  padding: 12px 15px;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+}
+/* ------------------------------------------------------------
+   CONTROLS
+------------------------------------------------------------ */
+.controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+  margin-bottom: 12px;
+}
+.controls select,
+.controls button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  background: white;
+  cursor: pointer;
+}
+.controls button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+.controls button:hover {
+  background: #0a58ca;
+}
+/* ------------------------------------------------------------
+   METRICS
+------------------------------------------------------------ */
+.metrics {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.metrics span strong {
+  font-weight: 600;
+}
+/* ------------------------------------------------------------
+   QUESTION GRID LAYOUT
+------------------------------------------------------------ */
+.quiz-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+/* Tablet view → 2 columns */
+@media (max-width: 1024px) {
+  .quiz-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Mobile view → 1 column (as earlier) */
+@media (max-width: 600px) {
+  .quiz-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* ------------------------------------------------------------
+   QUESTION BLOCK (Compact + Modern)
+------------------------------------------------------------ */
+.question-block {
+  background: white;
+  padding: 14px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+.question-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+/* ------------------------------------------------------------
+   OPTIONS
+------------------------------------------------------------ */
+.option {
+  display: block;
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  background: #f0f2f5;
+  border-radius: 5px;
+  border: 1px solid #d8dde3;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.option:hover {
+  background: #e6e8ec;
+}
+.option input {
+  margin-right: 6px;
+}
+/* ------------------------------------------------------------
+   EXPLANATION
+------------------------------------------------------------ */
+.explanation {
+  margin-top: 8px;
+  padding: 8px;
+  background: #f8f4e5;
+  border-left: 3px solid #d4a017;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.hidden {
+  display: none;
+}
+/* ------------------------------------------------------------
+   CORRECT / INCORRECT STYLING
+------------------------------------------------------------ */
+.correct {
+  border-color: #28a745 !important;
+  background: #e8f5ec;
+}
+.incorrect {
+  border-color: #dc3545 !important;
+  background: #faeaea;
+}
+/* ------------------------------------------------------------
+   SUBMIT BUTTON
+------------------------------------------------------------ */
+#submitBtn {
+  background: #198754 !important;
+  color: white;
+}
+#submitBtn:hover {
+  background: #157347 !important;
+}
+/* ------------------------------------------------------------
+   MOBILE OPTIMIZATIONS (consistent with earlier mobile UI)
+------------------------------------------------------------ */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .controls select,
+  .controls button {
+    width: 100%;
+  }
+  .question-block {
+    padding: 12px;
+  }
+  .option {
+    padding: 6px 8px;
+  }
+  .explanation {
+    font-size: 12.5px;
+  }
+}

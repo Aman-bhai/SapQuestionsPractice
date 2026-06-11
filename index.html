@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAP Interview Quiz</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <h1>SAP Interview Quiz</h1>
+    </header>
+    <main class="main">
+      <!-- GROUP SELECT -->
+      <div class="controls">
+        <label>Group:</label>
+        <select id="groupSelect"></select>
+        <label>Topic:</label>
+        <select id="topicFilter"></select>
+        <button id="shuffleQuestionsBtn">Shuffle Questions</button>
+        <button id="shuffleAnswersBtn">Shuffle Answers</button>
+        <button id="submitBtn">Submit Quiz</button>
+      </div>
+      
+
+      <div class="metrics">
+  <span>Showing: <strong id="showingCount">0</strong></span>
+  <span>Answered: <strong id="answeredCount">0</strong></span>
+  <span>Score: <strong id="scoreCount">--</strong></span>
+  <span>Percent: <strong id="percentCount">--</strong></span>
+</div>
+      <!-- QUIZ -->
+      <section class="quiz-list" id="quizList"></section>
+    </main>
+  </div>
+  <!-- MAIN LOGIC -->
+  <script type="module" src="logic.js"></script>
+</body>
+</html>
